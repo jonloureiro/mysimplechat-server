@@ -8,7 +8,6 @@ import module from './module';
 
 const server = http.createServer();
 const io = socket(server);
-module(io);
 
 server.listen(port, (): void => {
   consola.success('Server running');
@@ -20,3 +19,5 @@ server.listen(port, (): void => {
     consola.error(server.address());
   }
 });
+
+module(io);
